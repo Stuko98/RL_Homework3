@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<sdf version="1.6">                                <!-- consulta: http://sdformat.org/spec -->
+  <model name="circular_object">                   <!--assegna questo nome al model che viene inserito nel world-->
+    <static>true</static>                          <!-- oggetto statico: non si muove. In questo modo preveniamo la caduta per effetto della gravità -->
+    <link name="link">
+      <inertial>
+        <pose>0 0 0 0 1.57 0</pose>                <!--il cilindro di default è ruotato con le circonferenze verso l'alto e il basso-->
+        <mass>0.001</mass>
+
+        <inertia>
+          <ixx>3.7499999999999997e-06</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>1.8750008333333333e-06</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.8750008333333333e-06</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="visual">
+        <pose>0 0 0 0 1.57 0</pose>                <!--il cilindro di default è ruotato con le circonferenze verso l'alto e il basso-->
+        <geometry>
+          <cylinder>
+            <radius>0.15</radius>                  <!-- in metri -->
+            <length>0.0001</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>               <!--colore: rosso opaco -->
+        </material>
+      </visual>
+
+      <collision name="collision">
+        <pose>0 0 0 0 1.57 0</pose>                <!--il cilindro di default è ruotato con le circonferenze verso l'alto e il basso-->
+        <geometry>
+          <cylinder>
+            <radius>0.15</radius>     
+            <length>0.0001</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      
+    </link>
+  </model>
+</sdf>

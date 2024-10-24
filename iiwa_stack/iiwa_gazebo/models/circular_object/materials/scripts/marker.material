@@ -1,0 +1,15 @@
+material Circular_Object
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture circular_object.png
+        filtering anisotropic
+        max_anisotropy 16
+      }
+    }
+  }
+}
